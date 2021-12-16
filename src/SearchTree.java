@@ -52,7 +52,9 @@ public class SearchTree<E extends Comparable<E>> {
     private E findSmallest(SearchTreeNode<E> root) {
         // Yueheng
 //    	TO DO:
-        return null;
+        if (root.left == null) return root.data;
+
+        return findSmallest(root.left);
     }
 
     // post: prints the data of the tree, one per line
