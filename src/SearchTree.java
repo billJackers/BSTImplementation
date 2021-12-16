@@ -38,8 +38,18 @@ public class SearchTree<E extends Comparable<E>> {
 
     // post: value removed from tree so as to preserve binary search tree
     public void remove(E value) {
-//    	TO DO:
+//    	TO DO (the real):
         if (!contains(value)) return;  // it dont exits bruh
+
+
+    }
+
+    // returns a node that
+    public SearchTreeNode<E> searchFor(SearchTreeNode<E> root, E value) {
+        if (root == null || root.data == value) return root;
+
+        if (root.data.compareTo(value) > 0) return searchFor(root.right, value);
+        else return searchFor(root.left, value);
     }
 
 
