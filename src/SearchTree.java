@@ -42,10 +42,13 @@ public class SearchTree<E extends Comparable<E>> {
 //    	TO DO (the real):
         if (!contains(value)) return;  // it dont exits bruh
 
+        SearchTreeNode<E> oldNode = searchFor(overallRoot, value);
+        SearchTreeNode<E> newNode = findSmallest(oldNode);
+
 
     }
 
-    // returns a node that
+    // returns a node that (insert explanation here)
     public SearchTreeNode<E> searchFor(SearchTreeNode<E> root, E value) {
         if (root == null || root.data == value) return root;
 
@@ -65,10 +68,11 @@ public class SearchTree<E extends Comparable<E>> {
     }
 
     // post: return the smallest value in the binary search tree
-    private E findSmallest(SearchTreeNode<E> root) {
+    // Precondition: the initial root is not null
+    private SearchTreeNode<E> findSmallest(SearchTreeNode<E> root) {
         // Yueheng
 //    	TO DO:
-        if (root.left == null) return root.data;
+        if (root.left == null) return root;
 
         return findSmallest(root.left);
     }
