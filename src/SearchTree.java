@@ -8,6 +8,7 @@ public class SearchTree<E extends Comparable<E>> {
     // post: constructs an empty search tree
     public SearchTree() {
 //      TO DO:
+        overallRoot = new SearchTreeNode<E>(null, null, null);
     }
 
     // post: value added to tree so as to preserve binary search tree
@@ -74,12 +75,20 @@ public class SearchTree<E extends Comparable<E>> {
 
     // post: prints the data of the tree, one per line
     public void print() {
+        // Justin
 //    	TO DO:
+        printInorder(this.overallRoot);
     }
 
     // post: prints the data of the tree using an inorder traversal
     private void printInorder(SearchTreeNode<E> root) {
+        // Justin
 //    	TO DO:
+        if (root == null) return;
+        printInorder(root.left);
+        System.out.println(root.data);
+        printInorder(root.right);
+        return;
     }
 
 
