@@ -14,10 +14,12 @@ public class SearchTree<E extends Comparable<E>> {
     public void add(E value) {
         // Yueheng
 //    	TO DO:
+
     }
 
     // post: value added to tree so as to preserve binary search tree
     private SearchTreeNode<E> add(SearchTreeNode<E> root, E value) {
+        // Yueheng
 //    	TO DO:
         return null;
     }
@@ -55,7 +57,6 @@ public class SearchTree<E extends Comparable<E>> {
 
     // post: prints the data of the tree, one per line
     public void print() {
-        // Yueheng
 //    	TO DO:
     }
 
