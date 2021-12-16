@@ -42,7 +42,7 @@ public class SearchTree<E extends Comparable<E>> {
 
     // post: value removed to tree so as to preserve binary search tree
     private SearchTreeNode<E> remove(SearchTreeNode<E> root, E value) {
-//    	TO DO:
+//    	TO DO(Theriel):
         return null;
     }
 
