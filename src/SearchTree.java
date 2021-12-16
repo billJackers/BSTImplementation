@@ -12,6 +12,7 @@ public class SearchTree<E extends Comparable<E>> {
 
     // post: value added to tree so as to preserve binary search tree
     public void add(E value) {
+        // Yueheng
 //    	TO DO:
     }
 
@@ -47,12 +48,14 @@ public class SearchTree<E extends Comparable<E>> {
 
     // post: return the smallest value in the binary search tree
     private E findSmallest(SearchTreeNode<E> root) {
+        // Yueheng
 //    	TO DO:
         return null;
     }
 
     // post: prints the data of the tree, one per line
     public void print() {
+        // Yueheng
 //    	TO DO:
     }
 
