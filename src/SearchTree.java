@@ -1,6 +1,6 @@
 // Class SearchTree stores and prints a binary search tree of
 // objects of type E.  E must implement the Comparable<E>
-// interface.
+// interface
 
 public class SearchTree<E extends Comparable<E>> {
     private SearchTreeNode<E> overallRoot; // root of overall tree
