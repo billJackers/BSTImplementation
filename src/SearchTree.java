@@ -15,14 +15,18 @@ public class SearchTree<E extends Comparable<E>> {
     public void add(E value) {
         // Yueheng
 //    	TO DO:
-
+        add(overallRoot, value);
     }
 
     // post: value added to tree so as to preserve binary search tree
     private SearchTreeNode<E> add(SearchTreeNode<E> root, E value) {
         // Yueheng
 //    	TO DO:
-        return null;
+        if (root.data == null) root = new SearchTreeNode<E>(value);
+        else if (root.data.compareTo(value) > 0) add(root.left, value);
+        else if (root.data.compareTo(value) < 0) add(root.right, value);
+
+        return root;
     }
 
     // post: returns true if tree contains value, returns false otherwise
