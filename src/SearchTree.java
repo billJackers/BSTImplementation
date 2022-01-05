@@ -41,14 +41,24 @@ public class SearchTree<E extends Comparable<E>> {
 
     // post: returns true if tree contains value, returns false otherwise
     public boolean contains(E value) {
+        // Ethan
 //    	TO DO:
-        return false;
+        return contains(overallRoot, value);
     }
 
     // post: returns true if given tree contains value, returns false otherwise
     private boolean contains(SearchTreeNode<E> root, E value) {
+        // Ethan
 //    	TO DO:
-        return false;
+        if (root == null) {
+            return false;
+        } else if (root.data.equals(value)) {
+            return true;
+        } else if (root.data.compareTo(value) > 0) {
+            return contains(root.left, value);
+        } else {
+            return contains(root.right, value);
+        }
     }
 
     // post: value removed from tree so as to preserve binary search tree
