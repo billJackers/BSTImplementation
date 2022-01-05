@@ -12,6 +12,8 @@ public class SearchTree<E extends Comparable<E>> {
     }
 
     // post: value added to tree so as to preserve binary search tree
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
     public void add(E value) {
         // Yueheng
 //    	TO DO:
@@ -25,6 +27,8 @@ public class SearchTree<E extends Comparable<E>> {
     }
 
     // post: value added to tree so as to preserve binary search tree
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
     private SearchTreeNode<E> add(SearchTreeNode<E> root, E value) {
         // Yueheng
 //    	TO DO:
@@ -72,6 +76,8 @@ public class SearchTree<E extends Comparable<E>> {
 
     // post: return the smallest value in the binary search tree
     // Precondition: the initial root is not null
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
     private SearchTreeNode<E> findSmallest(SearchTreeNode<E> root) {
         // Yueheng
 //    	TO DO:
