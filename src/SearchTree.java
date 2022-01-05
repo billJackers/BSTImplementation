@@ -43,33 +43,26 @@ public class SearchTree<E extends Comparable<E>> {
 
     // post: value removed from tree so as to preserve binary search tree
     public void remove(E value) {
-//    	TO DO (the real):
-        if (!contains(value)) return;  // it dont exits bruh
-
-        SearchTreeNode<E> oldNode = searchFor(overallRoot, value);
-        SearchTreeNode<E> newNode = findSmallest(oldNode);
-
-
+        overallRoot = remove(overallRoot, value);
     }
 
-    // returns a node that (insert explanation here)
-    public SearchTreeNode<E> searchFor(SearchTreeNode<E> root, E value) {
-        if (root == null || root.data == value) return root;
-
-        if (root.data.compareTo(value) > 0) return searchFor(root.right, value);
-        else return searchFor(root.left, value);
-    }
-
-
-    // post: value removed to tree so as to preserve binary search tree
     private SearchTreeNode<E> remove(SearchTreeNode<E> root, E value) {
-//    	TO DO(Theriel):
-
-        // go right
-
-        // then go far left
-        return null;
+        if (root == null) return null;
+        else if (root.data.compareTo(value) > 0) {
+            root.left = remove(root.left, value);
+        } else if (root.data.compareTo(value) < 0) {
+            root.right = remove(root.right, value);
+        } else {
+            if (root.right == null) return root.left;
+            else if (root.left == null) return root.right;
+            else {
+                root.data = findSmallest(root.right).data;
+                root.right = remove(root.right, root.data);
+            }
+        }
+        return root;
     }
+
 
     // post: return the smallest value in the binary search tree
     // Precondition: the initial root is not null
