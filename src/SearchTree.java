@@ -8,21 +8,27 @@ public class SearchTree<E extends Comparable<E>> {
     // post: constructs an empty search tree
     public SearchTree() {
 //      TO DO:
-        overallRoot = new SearchTreeNode<E>(null, null, null);
+        overallRoot = new SearchTreeNode<E>(null);
     }
 
     // post: value added to tree so as to preserve binary search tree
     public void add(E value) {
         // Yueheng
 //    	TO DO:
-        add(overallRoot, value);
+        // Add to an empty tree
+        if (overallRoot.data == null) {
+            overallRoot = new SearchTreeNode<E>(value);
+        } else {
+            // If tree is not empty
+            add(overallRoot, value);
+        }
     }
 
     // post: value added to tree so as to preserve binary search tree
     private SearchTreeNode<E> add(SearchTreeNode<E> root, E value) {
         // Yueheng
 //    	TO DO:
-        if (root.data == null) root = new SearchTreeNode<E>(value);
+        if (root == null) root = new SearchTreeNode(value);
         else if (root.data.compareTo(value) > 0) add(root.left, value);
         else if (root.data.compareTo(value) < 0) add(root.right, value);
 
