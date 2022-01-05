@@ -28,9 +28,9 @@ public class SearchTree<E extends Comparable<E>> {
     private SearchTreeNode<E> add(SearchTreeNode<E> root, E value) {
         // Yueheng
 //    	TO DO:
-        if (root == null) root = new SearchTreeNode(value);
-        else if (root.data.compareTo(value) > 0) add(root.left, value);
-        else if (root.data.compareTo(value) < 0) add(root.right, value);
+        if (root == null) root = new SearchTreeNode<E>(value);
+        else if (root.data.compareTo(value) > 0) root.left = add(root.left, value);
+        else if (root.data.compareTo(value) < 0) root.right = add(root.right, value);
 
         return root;
     }
