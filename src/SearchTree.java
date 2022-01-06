@@ -40,6 +40,8 @@ public class SearchTree<E extends Comparable<E>> {
     }
 
     // post: returns true if tree contains value, returns false otherwise
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
     public boolean contains(E value) {
         // Ethan
 //    	TO DO:
@@ -47,6 +49,8 @@ public class SearchTree<E extends Comparable<E>> {
     }
 
     // post: returns true if given tree contains value, returns false otherwise
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
     private boolean contains(SearchTreeNode<E> root, E value) {
         // Ethan
 //    	TO DO:
