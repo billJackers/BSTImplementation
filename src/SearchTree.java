@@ -104,6 +104,8 @@ public class SearchTree<E extends Comparable<E>> {
     }
 
     // post: prints the data of the tree using an inorder traversal
+    // Time Complexity: O(2^n)
+    // Space Complexity: O(n)
     private void printInorder(SearchTreeNode<E> root) {
         // Justin
 //    	TO DO:
