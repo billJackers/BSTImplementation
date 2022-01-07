@@ -69,7 +69,9 @@ public class SearchTree<E extends Comparable<E>> {
     public void remove(E value) {
         overallRoot = remove(overallRoot, value);
     }
-
+    
+    // Time Complexity: O(height)
+    // Space Complexity: O(height)
     private SearchTreeNode<E> remove(SearchTreeNode<E> root, E value) {
         if (root == null) return null;
         else if (root.data.compareTo(value) > 0) {
